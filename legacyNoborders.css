@@ -1,0 +1,153 @@
+
+/* || RESET */ 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+
+/* || UTILITY CLASS */ 
+
+.nowraps{
+    white-space: nowrap;
+}
+
+
+/* || GENERAL STYLES */
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+}
+
+
+/* ||MOBILE DEVICES < 481px */
+
+/* ||HEADINGS */ 
+
+header{
+    position: sticky;
+    top: 0;
+    height: 10vh;
+    box-shadow: 5px 5px 40px 2px rgb(40, 0, 0);
+
+}
+
+.liens{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    column-gap: 1em;
+    height: 100%;
+    background-color: #EAD7D1;
+    box-shadow: 5px 5px 40px 2px rgb(40, 0, 0);
+}
+
+.liens a{
+    text-decoration: none;
+    color: rgb(105, 57, 10);
+    height: 100%;
+    display: grid;
+    place-content: center;
+    font: bolder;
+    font-size: 3vh;
+    padding: 0 5px;
+}
+
+.liens a:first-child{
+    font-size: 2.8vh;
+}
+
+.liens a:hover, .liens a:focus{
+    font-size: 3.5vh;
+    color: hsl(0, 0%, 0%);
+    transition: 0.4s;
+}
+
+.liens a:active{
+    box-shadow:  0 1px 1px 0.5px hsla(0, 0%, 0%, 0.655);
+}
+
+
+/* ||MAINS */
+
+main{
+    background-color: #DBCDC6;
+}
+
+h1{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    color: #292929;
+}
+
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+/*     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+ *//*     display: flex;
+    flex-flow: column nowrap;
+ */}
+
+.pic{
+    width: max(342px,30vw);
+    height: max(342px,30vw);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    margin: 1rem;
+}
+
+img{
+    /* width: fit-content;
+    height: inherit; */
+
+    /* object-fit: cover;
+    width: 90%;
+    height: auto; */
+
+/*     width: 90%;
+    height: inherit;
+ */    object-fit: cover;
+ width: 98%;
+ height: inherit;
+ box-shadow:  0 10px 10px 2px hsla(0, 0%, 0%, 0.655);
+ border-radius: 15px;
+}
+
+
+footer{
+    /*     height: 5%;
+     */        background-color: #F6F4D2;
+        width: 100%;
+        font-size: 1rem;
+        padding: 1em 0 1em 5em;
+        color: black;
+        border-top: solid 1px #333;
+}
+
+footer p{
+    font-weight: bold;
+}
+
+
+@media screen and (min-width: 481px){
+    .liens a:first-child{
+        font-size: 3vh;
+    } 
+}

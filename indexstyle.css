@@ -1,0 +1,302 @@
+
+
+/* || RESET */ 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+
+/* || UTILITY CLASS */ 
+
+.nowrap{
+    white-space: nowrap;
+}
+
+
+/* || GENERAL STYLES */
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: #111;
+}
+
+
+/* ||MOBILE DEVICES < 481px */
+
+/* || HEADINGS */ 
+
+header{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.liens{
+    background-color: #DBCDC6;
+    /* height: 8%; */
+    height: 10vh;
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+    column-gap: 1em;
+    position: sticky;
+    top: 0;
+    box-shadow: 5px 5px 40px 2px rgb(40, 0, 0);
+}
+
+.liens a:any-link{ /* Applies to both visited and unvisited links. */
+    text-decoration: none;
+    color: #333;
+/*     height: 100%;
+ */    display: grid;
+    place-content: center;
+    font: bolder;
+    font-size: 1.2em;
+    padding: 0 5px;
+}
+
+.liens :is(a:hover, a:focus){
+    font-size: 1.4em;
+    filter: hue-rotate(300deg);
+    transition: 0.4s;
+}
+
+.liens a:active{
+    box-shadow:  0 1px 1px 0.5px hsla(0, 0%, 0%, 0.655);
+}
+
+.headercontainer1{
+    background-image: url(Pictures/paul-zoetemeijer-1wG5NUWJG7c2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.headercontainer1 img{
+    width: max(350px, 45vw);
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 5px 5px 40px 2px rgb(40, 0, 0);
+    margin-bottom: 5px;
+}
+
+.welcomecard{
+    width: 93%;
+/*     height: auto;
+ */    background-color: hsla(0, 0%, 100%, 0.516);
+}
+
+.welcomecard p{
+    text-align: center;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 1.2em;
+/*     height: auto;
+ *//*     width: 98%;
+ */    padding: 20px 0;  
+}
+
+
+/* ||MAINS */
+
+main{
+    border-bottom: #333 solid 5px;
+}
+
+.biography{
+/*     height: 20%;
+ */    background-image: url(Pictures/butterfly2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.biographyBackground{
+    background-color: #f7d7e7ab;
+    /*     height: 100%;
+ */
+}
+
+main p{
+    text-indent: 2em;
+}
+
+.biography :is(p,ul), h1{
+    padding: 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.2em;
+    color: #1F1A38;
+}
+
+h1{
+    font-size: 2rem;
+/*     padding: 0 2em;
+ */    color: hsla(0, 0%, 0%, 0.756);
+}
+
+.biography ul{
+    list-style-type: disc;
+    text-align: justify;
+    list-style-position: inside;
+    padding: 0 0 0 1.5em;
+    line-height: 1.2;
+/*     word-spacing: 0.01em;
+ */}
+
+.biographyBackground p:nth-child(5){
+    font-weight: bold;
+    text-align: end;
+    padding: 0 1em 0 0;
+}
+
+li{
+    font-style: italic;
+    /* line-height: 1.2em; */
+    padding-right: 10px;
+}
+
+
+/* || section "pictureBoard" */
+
+.pictureBoard{
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-image: radial-gradient(black, #1F1A38);
+}
+
+.pic{
+    margin-top: 0.5em;
+    border-radius: 20px;
+}
+
+.pic figure{
+    width: max(350px, 31vw);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+figure img{
+    width: 98%;
+    height: inherit;
+    object-fit: contain;
+    box-shadow: 5px 5px 40px 2px rgb(40, 0, 0);
+    border-radius: 20px;
+}
+
+figcaption{
+    text-align: center;
+    color: #DBCDC6;
+}
+
+
+/* ||FOOTER */
+
+footer{
+    background-color: #DBCDC6;
+    width: 100%;
+    font-size: 1rem;
+    padding: 1em 0 1em 5em;
+    color: black;
+    box-shadow: 5px 5px 400px 20px rgb(40, 0, 0);
+
+}
+
+
+.bouton{
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    bottom: 50px;
+    right: 25px;
+    background-color: #7B506F;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    color: hsl(289, 84%, 10%);
+    font-weight: bolder;
+    font-style: italic;
+    text-decoration: none;
+    font-size: 1rem;
+    box-shadow: 5px 5px 40px 5px rgb(0, 0, 0);
+
+}
+
+
+/* ||iPAD AND TABS 481px - 768px */
+
+@media screen and (min-width: 481px){
+
+    .headercontainer1{
+        flex-wrap: wrap;
+    }
+
+    .headercontainer1 img{
+        display: none;
+    }
+
+    .headercontainer1 {
+        background-image: url(Pictures/backgroundpic1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+    .welcomecard p{
+        color: #333;
+        font-size: 2rem;
+        line-height: 1.3em;
+    }
+
+    
+    figure img{
+        border-radius: 25px;
+    }
+    
+    figcaption{
+        font-size: 1.2em;
+        padding: 0 10px;
+    }
+
+    .biography :is(p,ul), h1{
+        font-size: 2rem;
+    }
+    
+    footer{
+        font-size: 1.5rem;
+    }
+
+    .bouton{
+        width: 100px;
+        height: 100px;
+        font-size: 1.7rem;
+        font-style: unset;
+    }  
+       
+}
